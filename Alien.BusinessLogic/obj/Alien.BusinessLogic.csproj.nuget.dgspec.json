@@ -1,0 +1,232 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\gpgaloro\\Downloads\\AlienImobiliaria\\Alien.BusinessLogic\\Alien.BusinessLogic.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\gpgaloro\\Downloads\\AlienImobiliaria\\Alien.BusinessLogic\\Alien.BusinessLogic.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\gpgaloro\\Downloads\\AlienImobiliaria\\Alien.BusinessLogic\\Alien.BusinessLogic.csproj",
+        "projectName": "Alien.BusinessLogic",
+        "projectPath": "C:\\Users\\gpgaloro\\Downloads\\AlienImobiliaria\\Alien.BusinessLogic\\Alien.BusinessLogic.csproj",
+        "packagesPath": "C:\\Users\\gpgaloro\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\gpgaloro\\Downloads\\AlienImobiliaria\\Alien.BusinessLogic\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\gpgaloro\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "http://10.108.50.195/PSTech/Nuget.Server/nuget": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "C:\\Users\\gpgaloro\\Downloads\\AlienImobiliaria\\Alien.DataAccess\\Alien.DataAccess.csproj": {
+                "projectPath": "C:\\Users\\gpgaloro\\Downloads\\AlienImobiliaria\\Alien.DataAccess\\Alien.DataAccess.csproj"
+              },
+              "C:\\Users\\gpgaloro\\Downloads\\AlienImobiliaria\\Alien.Domain\\Alien.Domain.csproj": {
+                "projectPath": "C:\\Users\\gpgaloro\\Downloads\\AlienImobiliaria\\Alien.Domain\\Alien.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\gpgaloro\\Downloads\\AlienImobiliaria\\Alien.DataAccess\\Alien.DataAccess.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\gpgaloro\\Downloads\\AlienImobiliaria\\Alien.DataAccess\\Alien.DataAccess.csproj",
+        "projectName": "Alien.DataAccess",
+        "projectPath": "C:\\Users\\gpgaloro\\Downloads\\AlienImobiliaria\\Alien.DataAccess\\Alien.DataAccess.csproj",
+        "packagesPath": "C:\\Users\\gpgaloro\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\gpgaloro\\Downloads\\AlienImobiliaria\\Alien.DataAccess\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\gpgaloro\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "http://10.108.50.195/PSTech/Nuget.Server/nuget": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {
+              "C:\\Users\\gpgaloro\\Downloads\\AlienImobiliaria\\Alien.Domain\\Alien.Domain.csproj": {
+                "projectPath": "C:\\Users\\gpgaloro\\Downloads\\AlienImobiliaria\\Alien.Domain\\Alien.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.11, )"
+            },
+            "Microsoft.EntityFrameworkCore.Proxies": {
+              "target": "Package",
+              "version": "[5.0.9, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Pomelo.EntityFrameworkCore.MySql": {
+              "target": "Package",
+              "version": "[5.0.1, )"
+            },
+            "Pomelo.EntityFrameworkCore.MySql.Design": {
+              "target": "Package",
+              "version": "[1.1.2, )"
+            },
+            "System.Configuration.ConfigurationManager": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\gpgaloro\\Downloads\\AlienImobiliaria\\Alien.Domain\\Alien.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\gpgaloro\\Downloads\\AlienImobiliaria\\Alien.Domain\\Alien.Domain.csproj",
+        "projectName": "Alien.Domain",
+        "projectPath": "C:\\Users\\gpgaloro\\Downloads\\AlienImobiliaria\\Alien.Domain\\Alien.Domain.csproj",
+        "packagesPath": "C:\\Users\\gpgaloro\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\gpgaloro\\Downloads\\AlienImobiliaria\\Alien.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\gpgaloro\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "http://10.108.50.195/PSTech/Nuget.Server/nuget": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "dependencies": {
+            "System.ComponentModel.Annotations": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "X.PagedList.Mvc.Core": {
+              "target": "Package",
+              "version": "[7.9.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

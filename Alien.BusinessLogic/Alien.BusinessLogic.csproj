@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Alien.DataAccess\Alien.DataAccess.csproj" />
+    <ProjectReference Include="..\Alien.Domain\Alien.Domain.csproj" />
+  </ItemGroup>
+
+</Project>
