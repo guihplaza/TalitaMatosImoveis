@@ -1,0 +1,112 @@
+﻿@model Domain.AlienDB_Cadastre_Seu_Imovel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Proprietário, Cadastre seu Imóvel, Nós entraremos em contato..</h2>
+
+
+<hr />
+<div class="row">
+    <div class="col-md-12">
+        @using (Html.BeginForm("Create", "CadastreSeuImovel", FormMethod.Post))
+        {
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+          
+
+       
+        @*<div class="form-group">
+            <label asp-for="Id" class="control-label"></label>
+            <input asp-for="Id" class="form-control" />
+            <span asp-validation-for="Id" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Id_Empresa" class="control-label"></label>
+            <input asp-for="Id_Empresa" class="form-control" />
+            <span asp-validation-for="Id_Empresa" class="text-danger"></span>
+        </div>*@
+        <div class="row">
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label asp-for="Id_Tipo_Imovel" class="control-label">Tipo Imovel*</label>
+                    <select asp-for="Id_Tipo_Imovel" class="form-control" asp-items="ViewBag.TipoImovel"></select>
+                    <span asp-validation-for="Id_Tipo_Imovel" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label asp-for="Endereco" class="control-label"></label>
+                    <input asp-for="Endereco" class="form-control" />
+                    <span asp-validation-for="Endereco" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label asp-for="Bairro" class="control-label"></label>
+                    <input asp-for="Bairro" class="form-control" />
+                    <span asp-validation-for="Bairro" class="text-danger"></span>
+                </div>
+            </div>
+        </div>
+        <!--FIM-->
+        <div class="row">
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label asp-for="Cidade" class="control-label"></label>
+                    <input asp-for="Cidade" class="form-control" />
+                    <span asp-validation-for="Cidade" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label asp-for="Valor_aluguel" class="control-label"></label>
+                    <input asp-for="Valor_aluguel" class="form-control" />
+                    <span asp-validation-for="Valor_aluguel" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label asp-for="Tel_contato" class="control-label"></label>
+                    <input asp-for="Tel_contato" class="form-control" />
+                    <span asp-validation-for="Tel_contato" class="text-danger"></span>
+                </div>
+            </div>
+        </div>
+        <!--FIM DA ROW-->
+        <div class="row">
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label asp-for="Nome_proprietario" class="control-label"></label>
+                    <input asp-for="Nome_proprietario" class="form-control" />
+                    <span asp-validation-for="Nome_proprietario" class="text-danger"></span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-1">
+                <div class="form-group">
+                    <input type="submit" value="Enviar" class="btn btn-success" />
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div>
+                    <a class="btn btn-danger" asp-action="Index">Voltar</a>
+                </div>
+            </div>
+            <div class="g-recaptcha" data-sitekey="6Lf6y9scAAAAAHER0iIDYnPTkHq1AjO4cyUzaMRW"></div>
+            <br />
+            <br />
+            <br />
+            <br />
+        </div>
+        }
+    </div>
+</div>
+<script src='https://www.google.com/recaptcha/api.js' type="text/javascript"></script>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,130 @@
+﻿@model IEnumerable<Domain.AlienDB_Midia>
+
+@{
+    ViewData["Title"] = "Fotos";
+}
+
+<style>
+
+        .photo-gallery {
+            color: #313437;
+            background-color: #fff;
+        }
+
+        .photo-gallery p {
+            color: #7d8285;
+        }
+
+        .photo-gallery h2 {
+            font-weight: bold;
+            margin-bottom: 40px;
+            padding-top: 40px;
+            color: inherit;
+        }
+        .photo-gallery .intro {
+            font-size: 16px;
+            max-width: 500px;
+            margin: 0 auto 40px;
+        }
+
+        .photo-gallery .intro p {
+            margin-bottom: 0;
+        }
+
+        .photo-gallery .photos {
+            padding-bottom: 20px;
+        }
+
+        .photo-gallery .item {
+            padding-bottom: 30px;
+        }
+
+</style>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/css/lightbox.min.css">
+<div class="photo-gallery">
+    <div class="container">
+        <div class="row photos">
+            <ul class="gallery_box">
+                @{ var contador = 0; }
+                @foreach (var item in Model)
+                {
+                    if (contador == 0)
+                    {
+
+                <div class="row">
+                    <div class="col-md-2">
+                        <span class="pull-left"><b>Região:</b>@item.Imovel.Regiao.Descricao </span><br />
+                        <span class="pull-left"><b>Status:</b>@item.Imovel.Flg_status </span>
+                    </div>
+                    <div class="col-md-2">
+                        <span class="pull-left"><b>Carros:</b> @item.Imovel.Qtd_Carro_Garagem</span><br />
+                        <span class="pull-left"><b>Carros:</b>@item.Imovel.Qtd_Sala_jantar</span><br />
+                    </div>
+                    <div class="col-md-2">
+                        <span class="pull-left"><b>Quartos:</b> @item.Imovel.Qtd_Dormitorios</span><br />
+                        <span class="pull-left"><b>Lavanderia:</b>@item.Imovel.Qtd_Lavanderia</span><br />
+                    </div>
+                    <div class="col-md-2">
+                        <span class="pull-left"><b>Banheiros:</b>@item.Imovel.Qtd_Banheiro</span><br />
+                        <span class="pull-left"><b>Suíte:</b>@item.Imovel.Qtd_Suite</span><br />
+                    </div>
+
+                    <div class="col-md-4">
+                        <h3><span class="proerty-price pull-right"><b> Valor:</b>@String.Format("{0:N0}", @item.Imovel.Valor_aluguel)</span></h3>
+                    </div>
+                            <p style="display: none;">@item.Imovel.Bairro</p>
+                </div>
+
+                        contador = 1;
+
+                        }
+                        @if (item.Caminho != null)
+                        {
+
+                            <a href="@item.Caminho" style="width: 400px; height: 400px;" data-lightbox="photos">
+                                <img class="img-fluid" style="width: 400px; height: 400px;" src="@item.Caminho">
+                            </a>
+
+                        }
+                        }
+
+</ul>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12 text-center">
+        <h3><i class="fa fa-phone"></i>Alugue esse Imóvel</h3>
+        <p class="text-muted">
+            Nossos colaboradores atendem via Facebook, Whatsapp ou ligação telefonica, fique á vontade para escolher o melhor para voçê..
+        </p>
+        <div class="row">
+            <div class="col-xs-2 text-center">
+                <p><strong>(14) 3433-7001</strong></p>
+            </div>
+            <div class="col-xs-2 text-center">
+                <p><strong>(14) 3434-3304</strong></p>
+            </div>
+            <div class="col-xs-2 text-center">
+                <p><strong>(14) 9 9199-8554</strong></p>
+            </div>
+            <div class="col-xs-2 text-center">
+                <p><strong>(14) 9 9146-0812</strong></p>
+            </div>
+            <div class="col-xs-2 text-center">
+                <p><strong>(14) 9 9648-6569</strong></p>
+            </div>
+            <div class="col-xs-2 text-center">
+                <p><strong>(14) 9 9136-4870</strong></p>
+            </div>
+        </div>
+        </div>
+</div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/js/lightbox.min.js"></script>
+
+
+

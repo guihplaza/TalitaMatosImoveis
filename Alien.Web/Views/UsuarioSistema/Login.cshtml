@@ -1,0 +1,55 @@
+﻿@model Domain.AlienDB_Usuario_Sistema
+
+@{
+    ViewData["Title"] = "Login";
+}
+<h2>@ViewData["Erro"]</h2>
+
+<div class="row">
+    <div class="col-md-4">
+    </div>
+    <div class="col-md-4">
+        <form asp-action="Login">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Nom_Login" class="control-label"></label>
+                <input type="text" name="filtroUs" class="form-control" value="@ViewData["filtroUsuario"]" />
+                <span asp-validation-for="Nom_Login" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Des_Senha" class="control-label"></label>
+                <input type="password" name="filtroSe" class="form-control" value="@ViewData["filtroSenha"]" />
+                <span asp-validation-for="Des_Senha" class="text-danger"></span>
+            </div>
+
+
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <input class="btn btn-success" type="submit" value="Entrar" />
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div>
+                        <a class="btn btn-danger" href="~/Home/IndexModal">Voltar</a>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                </div>
+            </div>
+
+        </form>
+    </div>
+    <div class="col-md-4">
+    </div>
+    <br />
+    <br />
+    <br />
+</div>
+
+
+
+    @section Scripts {
+        @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    }

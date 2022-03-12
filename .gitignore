@@ -1,0 +1,18 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/Alien.Domain/obj/*
+/Alien.Domain/bin/*
+/Alien.DataAccess/obj/*
+/Alien.DataAccess/bin/*
+/Alien.BusinessLogic/obj/*
+/Alien.BusinessLogic/bin/*
+/AlienImobiliaria/Alien.Web/.vs/*
+/Alien.Domain/obj*
+/Alien.Domain/bin*
+/Alien.DataAccess/obj*
+/Alien.DataAccess/bin*
+/Alien.BusinessLogic/obj*
+/Alien.BusinessLogic/bin*
+/AlienImobiliaria/Alien.Web/.vs*

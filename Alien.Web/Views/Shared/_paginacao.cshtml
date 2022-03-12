@@ -1,0 +1,27 @@
+﻿
+@if (Model != null)
+{
+    var prevDisable = !Model.HasPreviousPage ? "disabled" : "";
+    var nextDisable = !Model.HasNextPage ? "disabled" : "";
+
+    <a asp-route-pageNumber="@(Model.pageIndex - 1)" 
+       asp-route-pageSize="@(Model.pageSize)"
+       asp-route-pageIndex="@(Model.pageIndex - 1)"
+       asp-route-filtroVenda="@(Model.filtroVenda)"
+       asp-route-filtroValor="@(Model.filtroValor)"
+       asp-route-filtroRegiao="@(Model.filtroRegiao)"
+       asp-route-filtroTipo="@(Model.filtroTipo)"
+       class="btn btn-dark @prevDisable">
+        Anterior
+    </a>
+    <a asp-route-pageNumber="@(Model.pageIndex + 1)" 
+       asp-route-pageSize="@(Model.pageSize)"
+       asp-route-pageIndex="@(Model.pageIndex + 1)"
+       asp-route-filtroVenda="@(Model.filtroVenda)"
+       asp-route-filtroValor="@(Model.filtroValor)"
+       asp-route-filtroRegiao="@(Model.filtroRegiao)"
+       asp-route-filtroTipo="@(Model.filtroTipo)"
+       class="btn btn-dark @nextDisable">
+        Próximo
+    </a>
+}

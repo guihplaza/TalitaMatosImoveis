@@ -1,0 +1,63 @@
+﻿@model IEnumerable<Domain.AlienDB_Empreendimentos>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+@*<p>
+        <a asp-action="Create">Create New</a>
+    </p>*@
+<table class="table">
+    <thead>
+        <tr>
+            @*<th>
+                    @Html.DisplayNameFor(model => model.Id)
+                </th>*@
+            @*<th>
+                    @Html.DisplayNameFor(model => model.Id_Empresa)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Id_Tipo_Imovel)
+                </th>*@
+            <th>
+                @Html.DisplayNameFor(model => model.NomeLancamento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cidade)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Construtura)
+            </th>
+            @*<th>
+                    @Html.DisplayNameFor(model => model.Id_Regiao)
+                </th>*@
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                @*<td>
+                        @Html.DisplayFor(modelItem => item.Id)
+                    </td>*@
+                @*<td>
+                        @Html.DisplayFor(modelItem => item.Id_Empresa)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Id_Tipo_Imovel)
+                    </td>*@
+                <td>
+                    @Html.DisplayFor(modelItem => item.NomeLancamento)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Cidade)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Construtura)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<a class="btn btn-danger" asp-controller="Home" asp-action="IndexModal">Voltar</a>

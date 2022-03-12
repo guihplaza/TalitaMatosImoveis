@@ -1,0 +1,73 @@
+﻿@model Domain.AlienDB_Empreendimentos
+
+@{
+    ViewData["Title"] = "Novo Empreendimento";
+}
+
+<hr />
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label style="color:red" asp-for="Id_Tipo_Imovel" class="control-label">Tipo Imovel*</label>
+                        <select asp-for="Id_Tipo_Imovel" class="form-control" asp-items="ViewBag.TipoImovel"></select>
+                        <span asp-validation-for="Id_Tipo_Imovel" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label style="color:red" asp-for="Regiao" class="control-label">Região*</label>
+                        <select asp-for="Regiao" class="form-control" asp-items="ViewBag.Regiao"></select>
+                        <span asp-validation-for="Regiao" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label style="color:red" asp-for="Cidade" class="control-label"></label>
+                        <input asp-for="Cidade" class="form-control" />
+                        <span asp-validation-for="Cidade" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label style="color:red" asp-for="Construtura" class="control-label"></label>
+                        <input asp-for="Construtura" class="form-control" />
+                        <span asp-validation-for="Construtura" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label asp-for="NomeLancamento" class="control-label"></label>
+                        <input asp-for="NomeLancamento" class="form-control" />
+                        <span asp-validation-for="NomeLancamento" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-2">
+                    <div class="form-group">
+                        <input type="submit" value="Salvar" class="btn btn-success" />
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div>
+                        <a class="btn btn-danger" asp-controller="Imovel" asp-action="Index">Voltar</a>
+                    </div>
+                </div>
+            </div>
+
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,65 @@
+﻿@model IEnumerable<Domain.AlienDB_Midia>
+
+@{
+    ViewData["Title"] = "MaisFotos";
+}
+
+<div class="page-head">
+    <div class="container">
+        <div class="row">
+            <div class="page-head-content">
+                <h1 class="page-title">Mais Imóveis</h1>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Imovel/Galeria?id=1 End page header -->
+
+<table class="table">
+    <thead>
+        <tr>
+            <th></th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <br />
+        <br />
+
+        <div class="item-thumb">
+
+            @foreach (var item in Model)
+            {
+                @if (item != null)
+                {
+                    <div class="col-sm-2" style="  left: 10px;">
+                        <div class="box-two proerty-item">
+                            <div class="item-thumb">
+                                <a href="@item.Caminho">
+                                    <a href="/Imovel/MaisFotos?id=@item.Id_Imovel" data-lightbox="photos"><img style="width: 1900px; height: 400px;" class="img-fluid" src="@item.Caminho"></a>
+                                </a>
+                                <div class="item-entry overflow">
+                                    <h5><a>@item.Imovel.Bairro</a></h5>
+                                    <div class="dot-hr"></div>
+                                    <span class="pull-left"><b> Região: </b> @item.Imovel.Regiao.Descricao </span><br />
+                                    <span class="pull-left"><b> Status: </b> @item.Imovel.Flg_status </span>
+                                    <span class="proerty-price pull-right"><b style="padding-left: 10px;">Valor: </b>@String.Format("{0:N0}", @item.Imovel.Valor_aluguel)</span>
+                                    <p style="display: none;">@item.Imovel.Bairro</p>
+                                    <div class="property-icon">
+                                        <img src="/lib/assets/img/icon/bed.png"> @item.Imovel.Qtd_Dormitorios |
+                                        <img src="/lib/assets/img/icon/shawer.png">@item.Imovel.Qtd_Banheiro |
+                                        <img src="/lib/assets/img/icon/cars.png">@item.Imovel.Qtd_Carro_Garagem
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+             }
+            <br />
+
+        </div>
+
+    </tbody>
+</table>
+<partial name="_paginacao" />

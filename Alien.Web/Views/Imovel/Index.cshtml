@@ -1,0 +1,152 @@
+﻿@model X.PagedList.IPagedList<Domain.AlienDB_Imovel>
+@using X.PagedList.Mvc.Core;
+
+@{
+    ViewData["Title"] = "Painel Administrativo";
+}
+
+<h2>Imóveis - Bem Vindo @ViewData["Nome"]</h2>
+
+<div class="">
+    <div class="row">
+        <p>
+            <a class="btn btn-info" asp-action="Create">Novo Imóvel</a>
+            <a class="btn btn-info" asp-controller="Empreendimentos" asp-action="Create">Novo Empreendimento</a>
+            <a class="btn btn-info" asp-controller="Empreendimentos" asp-action="Adm">Ver Empreendimentos </a>
+            <a class="btn btn-info" asp-controller="CadastreSeuImovel" asp-action="Index">Cadastro Expontâneo</a>
+            <!-- <a class="btn btn-info" asp-controller="CadastreSeuImovel" asp-action="Index">Casdastro Expontãneo</a>-->
+        </p>
+    </div>
+    @*<partial name="_Create">*@
+
+    <form border="1" asp-action="Index" method="get">
+        <div class="row">
+            <div class="col-md-6">
+                <input type="text" name="filtro" class="form-control" value="@ViewData["filtroAtual"]" placeholder="Buscar endereço ou código da chave!" />                
+            </div>
+            <div class="col-md-3">
+                <input type="submit" value="Procurar" class="btn btn-success" />
+            </div>
+            <div class="col-md-3">
+                <a class="btn btn-danger" asp-action="Index">Voltar</a>
+            </div>
+        </div>
+    </form>
+
+    <table class="table table-striped">
+        <thead class="thead-dark">
+            <tr>
+                @*<th>
+                        @Html.DisplayNameFor(model => model.Id)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Id_Empresa)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Id_Tipo_Imovel)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Dat_Inclui)
+                    </th>*@
+                <th scope="col">
+                    <a asp-action="Index" asp-route-ordem="" asp-route-filtroAtual="@ViewData["filtroAtual"]">Código Chave</a>
+                </th>
+                <th scope="col">
+                    @Html.DisplayNameFor(model => model[0].Endereco)
+                </th>
+                <th scope="col">
+                    @Html.DisplayNameFor(model => model[0].Complemento)
+                </th>
+                <th scope="col">
+                    @Html.DisplayNameFor(model => model[0].Bairro)
+                </th>
+                <th scope="col">
+                    @Html.DisplayNameFor(model => model[0].Regiao)
+                </th>
+
+                @*<th>
+                        @Html.DisplayNameFor(model => model.Valor_condominio)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Valor_Taxa_Administrativa)
+                    </th>*@
+                <th scope="col">
+                    @Html.DisplayNameFor(model => model[0].Valor_aluguel);
+
+                </th>
+                <th scope="col">
+                    @Html.DisplayNameFor(model => model[0].Condicoes_Imovel)
+                </th>
+                <th scope="col">
+                    @Html.DisplayNameFor(model => model[0].Flg_destaque)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model[0].Flg_status)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    @*<td>
+                            @Html.DisplayFor(modelItem => item.Id)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Id_Empresa)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Id_Tipo_Imovel)
+                        </td>*@
+                    @*<td>
+                            @Html.DisplayFor(modelItem => item.Dat_Inclui)
+                        </td>*@
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Codigo_chave)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Endereco)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Complemento)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Bairro)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Regiao.Descricao)
+                    </td>
+                    @*<td>
+                            @Html.DisplayFor(modelItem => item.Valor_condominio)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Valor_Taxa_Administrativa)
+                        </td>*@
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Valor_aluguel)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Condicoes_Imovel)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Flg_destaque)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Flg_status)
+                    </td>
+
+                    <td>
+                        <a class="btn btn-info" asp-action="Edit" asp-route-id=@item.Id>Editar</a> |
+                        <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Deletar</a> |
+                        <a class="btn btn-success" asp-action="Upload" asp-route-id="@item.Id">Upload</a> |
+                        <a class="btn btn-warning" asp-action="Galeria" asp-route-id=@item.Id>Fotos</a> |
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <br />
+
+    @Html.PagedListPager(Model, pagina => Url.Action("Index", new { pagina }))
+</div>

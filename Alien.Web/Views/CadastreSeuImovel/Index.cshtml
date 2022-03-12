@@ -1,0 +1,83 @@
+﻿@model IEnumerable<Domain.AlienDB_Cadastre_Seu_Imovel>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<table class="table table-striped">
+    <thead class="thead-dark">
+        <tr>
+            @*<th>
+                    @Html.DisplayNameFor(model => model.Id)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Id_Empresa)
+                </th>*@
+            <th scope="col">
+                @Html.DisplayNameFor(model => model.Id_Tipo_Imovel)
+            </th>
+            <th scope="col">
+                @Html.DisplayNameFor(model => model.Endereco)
+            </th>
+            <th scope="col">
+                @Html.DisplayNameFor(model => model.Bairro)
+            </th>
+            <th scope="col">
+                @Html.DisplayNameFor(model => model.Cidade)
+            </th>
+            <th scope="col">
+                @Html.DisplayNameFor(model => model.Valor_aluguel)
+            </th>
+            <th scope="col">
+                @Html.DisplayNameFor(model => model.Tel_contato)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nome_proprietario)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                @*<td>
+                        @Html.DisplayFor(modelItem => item.Id)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Id_Empresa)
+                    </td>*@
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id_Tipo_Imovel)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Endereco)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Bairro)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Cidade)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Valor_aluguel)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Tel_contato)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nome_proprietario)
+                </td>
+                <td>
+                    <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Deletar</a> |
+                </td>
+
+            </tr>
+        }
+    </tbody>
+    <div class="col-md-4">
+        <div>
+            <a class="btn btn-danger" asp-controller="Imovel" asp-action="Index">Voltar</a>
+        </div>
+    </div>
+</table>

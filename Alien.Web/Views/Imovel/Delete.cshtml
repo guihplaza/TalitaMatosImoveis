@@ -1,0 +1,221 @@
+﻿@model Domain.AlienDB_Imovel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Você deseja Excluir Permanentemente Esse Imóvel?</h3>
+<div>
+
+    <hr />
+    <dl class="dl-horizontal">
+        <div class="row">
+            <div class="col-md-3">
+
+            </div>
+            <div class="col-md-3">
+
+            </div>
+            <div class="col-md-3">
+
+            </div>
+            <div class="col-md-3">
+
+            </div>
+        </div>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Id_Empresa)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Id_Empresa)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Id_Tipo_Imovel)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Id_Tipo_Imovel)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Codigo_chave)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Codigo_chave)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Endereco)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Endereco)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Complemento)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Complemento)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Bairro)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Bairro)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Cidade)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Cidade)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Qtd_Dormitorios)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Qtd_Dormitorios)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Qtd_Sala_estar)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Qtd_Sala_estar)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Qtd_Sala_jantar)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Qtd_Sala_jantar)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Qtd_Banheiro)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Qtd_Banheiro)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Qtd_Lavanderia)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Qtd_Lavanderia)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Qtd_Edicula)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Qtd_Edicula)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Qtd_Suite)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Qtd_Suite)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Qtd_Copa)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Qtd_Copa)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Qtd_Carro_Garagem)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Qtd_Carro_Garagem)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Qtd_Dispensa)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Qtd_Dispensa)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Qtd_Quintal)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Qtd_Quintal)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Qtd_Aluguel_Advogado)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Qtd_Aluguel_Advogado)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Qtd_Aluguel_Pintura)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Qtd_Aluguel_Pintura)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Nro_Parcela_Inicio_Aluguel_Imobiliaria)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Nro_Parcela_Inicio_Aluguel_Imobiliaria)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Observacoes)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Observacoes)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Valor_IPTU)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Valor_IPTU)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Valor_condominio)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Valor_condominio)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Valor_Taxa_Administrativa)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Valor_Taxa_Administrativa)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Valor_aluguel)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Valor_aluguel)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Condicoes_Imovel)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Condicoes_Imovel)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Dat_saida_locacao)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Dat_saida_locacao)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Dat_Inclui)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Dat_Inclui)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Id_Regiao)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Id_Regiao)
+        </dd>
+    </dl>
+
+    <div class="row">
+        <div class="col-md-5">
+            <form asp-action="Delete">
+                <input type="hidden" asp-for="Id" />
+                <input type="submit" value="Delete" class="btn btn-danger" /> |
+                <a class="btn btn-danger" asp-action="Index">Voltar</a>
+            </form>
+        </div>
+    </div>
+
+

@@ -1,0 +1,218 @@
+﻿@using Alien.Web.Models
+@model PaginatedList<Domain.AlienDB_Midia>
+
+@{
+    ViewData["Title"] = "Bem Vindos";
+}
+
+<div class="slider-area">
+    <div class="slider">
+
+
+        @*<div class="item">
+                <video autoplay muted loop>
+                    <source src="~/lib/assets/img/slide1/video2.mp4" type="video/mp4">VIDEO INSTITUCIONAL
+                </video>
+            </div>*@
+
+        <div class="item"><img src="~/lib/assets/img/slide1//slider-image-4.jpg"
+                               alt="GTA V" style="width: 1900px;"></div>
+        @*<div class="item"><img src="~/lib/assets/img/slide1/slider-image-2.jpg" alt="The Last of us"></div>
+            <div class="item"><img src="~/lib/assets/img/slide1/slider-image-1.jpg" alt="GTA V"></div>*@
+
+
+    </div>
+    <div class="slider-content">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 co,l-md-offset-1 col-sm-12">
+                <a><img src="~/lib/assets/img/TRANSPARENTE.PNG" alt=""></a><!-- LOGO EM CIMA DA BUSCA-->
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12">
+                @*<h2>EM CONSTRUÇÃO</h2>*@
+                <p></p>
+                <div class="search-form wow pulse" data-wow-delay="0.8s">
+
+                    <form action="Home/Pesquisa" class=" form-inline">
+                        <button class="btn  toggle-btn" type="button"><i class="fa fa-bars"></i></button>
+
+                        <div class="form-group">
+                            <!--CIDADE-->
+                            <select id="lunchBegins" name="filtroVenda" class="selectpicker" data-live-search="true" data-live-search-style="begins" title="Tipo*">
+                                <option value="Disponivel">Alugar</option>
+                                <option value="Venda">Comprar</option>
+                                <option value="Empreendimento">Empreendimentos</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <!--CIDADE-->
+                            <select id="lunchBegins" name="filtroRegiao" class="selectpicker" data-live-search="true" data-live-search-style="begins" title="Região">
+                                <option>Norte</option>
+                                <option>Sul</option>
+                                <option>Leste</option>
+                                <option>Oeste</option>
+                                <option>Centro</option>
+                                <option>Padre Nobrega</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <select id="basic" name="filtroTipo" class="selectpicker show-tick form-control" title="Imovel">
+                                <option>Casa</option>
+                                <option>Apartamento</option>
+                                <option>Casa de Condominio</option>
+                                <option>Comercial </option>
+                                <option>Terreno</option>
+                            </select>
+                        </div>
+
+
+                        <div class="form-group">
+                            <input border="1" class="show-tick form-control" name="filtroValor"  placeholder="Valor desejado" />
+                        </div>
+
+                        <button class="btn search-btn" type="submit"><i class="fa fa-search"></i></button>
+
+                        <div style="display: none;" class="search-toggle">
+
+
+                            <br>
+
+                            <button class="btn search-btn prop-btm-sheaerch" type="submit"><i class="fa fa-search"></i></button>
+                        </div>
+                    </form>
+                    <!--Busca ATE AQUI CARAI-->
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- property area -->
+    <div class="content-area home-area-1 recent-property" style="background-color: #f37d35; padding-bottom: 55px; ">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1 col-sm-12 text-center page-title">
+                    <!-- /.feature title -->
+                    <h2 style="color:black"><strong>Residências Destaque</strong></h2>
+                    <p style="color:black"><strong>Veja algumas de nossas principais residências</strong></p>
+                </div>
+            </div>
+
+            <!--BLOCO DE IMOVEIS CADASTRADOS, GERAR 7-->
+            <div class="row">
+                <div class="proerty-th">
+                    <tbody>
+                        <br />
+                        <br />
+
+                        @foreach (var item in Model)
+                        {
+                            @if (item != null)
+                            {
+                                <div class="col-sm-6 col-md-3 p0">
+                                    <div class="box-two proerty-item">
+                                        <div class="item-thumb">
+                                            <a href="@item.Caminho">
+                                                <a href="/Imovel/MaisFotos?id=@item.Id_Imovel" data-lightbox="photos"><img  style="width: 1900px; height:1900px;", class="img-fluid" src="@item.Caminho"></a>
+                                            </a>
+                                            <div class="item-entry overflow">
+                                                <h5><a>@item.Imovel.Bairro</a></h5>
+                                                <div class="dot-hr"></div>
+                                                <span class="pull-left"><b> Região: </b> @item.Imovel.Regiao.Descricao</span><br />
+                                                <span class="pull-left"><b> Status: </b> @item.Imovel.Flg_status </span>
+                                                @*<span class="proerty-price pull-right"><b> Aluguel: </b> @item.Imovel.Valor_aluguel</span>*@
+                                                <p style="display: none;">@item.Imovel.Bairro</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        }
+                    </tbody>
+
+                    <div href="~/Imovel/MaisImoveis" class="col-sm-6 col-md-3 p0">
+                        <div class="box-tree more-proerty text-center">
+                            <div class="item-tree-icon">
+                                <i class="fa fa-th"></i>
+                            </div>
+                            <div href="~/Imovel/MaisImoveis" class="more-entry overflow">
+                                <h5><a href="~/Imovel/MaisImoveis">Não Encontrou?</a></h5>
+                                <h5 href="~/Imovel/MaisImoveis" class="tree-sub-ttl">Veja Outras Opções</h5>
+                                <a href="~/Imovel/MaisImoveis" class="btn border-btn more-black">Mostrar Mais..</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    @*<partial name="_paginacao" />*@
+    <!--Welcome area -->
+    <div class="Welcome-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 Welcome-entry  col-sm-12">
+                    <div class="col-md-5 col-md-offset-2 col-sm-6 col-xs-12">
+                        <div class="welcome_text wow fadeInLeft" data-wow-delay="0.3s" data-wow-offset="100">
+                            <div class="row">
+                                <div class="col-md-10 col-md-offset-1 col-sm-12 text-center page-title">
+                                    <!-- /.feature title -->
+                                    <h2>Veja Mais</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-5 col-sm-6 col-xs-12">
+                        <div class="welcome_services wow fadeInRight" data-wow-delay="0.3s" data-wow-offset="100">
+                            <div class="row">
+                                <div class="col-xs-6 m-padding">
+                                    <div class="welcome-estate">
+                                        <div class="welcome-icon">
+                                            <i class="pe-7s-home pe-4x"></i>
+                                        </div>
+                                        <h3><a href="/CadastreSeuImovel/Create">Cadastre seu Imóvel</a></h3>
+                                    </div>
+                                </div>
+                                <div class="col-xs-6 m-padding">
+                                    <div class="welcome-estate">
+                                        <div class="welcome-icon">
+                                            <i class="pe-7s-users pe-4x"></i>
+                                        </div>
+                                        <h3><a href="/Home/RedeSocial">Redes Sociais</a></h3>
+
+                                    </div>
+                                </div>
+
+
+                                <div class="col-xs-12 text-center">
+                                    <i class="welcome-circle"></i>
+                                </div>
+
+                                <div class="col-xs-6 m-padding">
+                                    <div class="welcome-estate">
+                                        <div class="welcome-icon">
+                                            <i class="pe-7s-notebook pe-4x"></i>
+                                        </div>
+                                        <h3><a href="/Home/TrabalheConosco">Trabalhe Conosco</a></h3>
+                                    </div>
+                                </div>
+                                <div class="col-xs-6 m-padding">
+                                    <div class="welcome-estate">
+                                        <div class="welcome-icon">
+                                            <i class="pe-7s-help2 pe-4x"></i>
+                                        </div>
+                                        <h3><a href="/Home/OndeEstamos">Onde Estamos</a></h3>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

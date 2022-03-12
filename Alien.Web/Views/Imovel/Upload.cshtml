@@ -1,0 +1,41 @@
+﻿@model Domain.AlienDB_Midia
+
+@{
+    ViewData["Title"] = "Upload";
+}
+
+<h2>Enviar Imagens do Imovel</h2>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="EnviarArquivo" enctype="multipart/form-data" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="ImagemByte" class="label label-success">Selecionar Imagens*</label>
+                <input type="file" name="arquivos" multiple />
+                <span asp-validation-for="ImagemByte" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <input type="submit" value="Enviar" class="btn btn-success" />
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div>
+                        <a class="btn btn-danger" asp-action="Index">Voltar</a>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<div>
+    
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

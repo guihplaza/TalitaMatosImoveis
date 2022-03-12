@@ -1,0 +1,189 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NH3Y9ECFV7"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-NH3Y9ECFV7');
+    </script>
+
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Talita Matos Imovéis - @ViewData["Title"]</title>
+    @*<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="~/css/site.css" />*@
+
+    <meta name="description" content="company is a real-estate template">
+    <meta name="author" content="Kimarotec">
+    <meta name="keyword" content="html5, css, bootstrap, property, real-estate theme , bootstrap template">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="shortcut icon" href="~/TalitaIcon.gif" type="image/x-icon">
+    <link rel="icon" href="~/TalitaIcon.gif" type="image/x-icon">
+    <link rel="stylesheet" href="~/lib/assets/css/normalize.css">
+    <link rel="stylesheet" href="~/lib/assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="~/lib/assets/css/fontello.css">
+    <link href="~/lib/assets/fonts/icon-7-stroke/css/pe-icon-7-stroke.css" rel="stylesheet">
+    <link href="~/lib/assets/fonts/icon-7-stroke/css/helper.css" rel="stylesheet">
+    <link href="~/lib/assets/css/animate.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" href="~/lib/assets/css/bootstrap-select.min.css">
+    <link rel="stylesheet" href="~/lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/lib/assets/css/icheck.min_all.css">
+    <link rel="stylesheet" href="~/lib/assets/css/price-range.css">
+    <link rel="stylesheet" href="~/lib/assets/css/owl.carousel.css">
+    <link rel="stylesheet" href="~/lib/assets/css/owl.theme.css">
+    <link rel="stylesheet" href="~/lib/assets/css/owl.transitions.css">
+    <link rel="stylesheet" href="~/lib/assets/css/style.css">
+    <link rel="stylesheet" href="~/lib/assets/css/responsive.css">
+
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-default " style="background-color: #f37d35 ">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    @*<a class="navbar-brand" href="index.html"><img src="~/lib/assets/img/projeto_logo200.jpg" alt=""></a>*@
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navigation">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse yamm" id="navigation">
+                    <div class="button navbar-right">
+                        @*<button class="navbar-btn nav-button wow bounceInRight login" onclick=" window.open('register.html')" data-wow-delay="0.45s">Login</button>
+                            <button class="navbar-btn nav-button wow fadeInRight" onclick=" window.open('submit-property.html')" data-wow-delay="0.48s">Submit</button>*@
+                    </div>
+                    <ul class="main-nav nav navbar-nav navbar-right">
+                        <li class="wow fadeInDown" data-wow-delay="0.2s"><a style=" color: white " href="http://www.talitamatosimoveis.com.br"><strong>Home</strong></a></li>
+                        <li class="wow fadeInDown" data-wow-delay="0.2s"><a style=" color: white " href="~/Empreendimentos/Index"><strong>Empreendimentos</strong></a></li>
+                        <li class="wow fadeInDown" data-wow-delay="0.3s"><a style=" color: white " href="~/CadastreSeuImovel/Create"><strong>Cadastre seu Imóvel</strong></a></li>
+                        <li class="wow fadeInDown" data-wow-delay="0.5s"><a style=" color: white " href="~/Home/Contact"><strong>Contato</strong></a></li>
+                        <li class="wow fadeInDown" data-wow-delay="0.2s"><a style=" color: white " href="~/UsuarioSistema/Login"><strong>Administrativo</strong></a></li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+        <!-- End of nav bar -->
+    </header>
+
+    <main role="main" class="pb-3">
+        @RenderBody()
+    </main>
+    
+
+
+    <script src="~/lib/assets/js/modernizr-2.6.2.min.js"></script>
+    <script src="~/lib/assets/js/jquery-1.10.2.min.js"></script>
+    <script src="~/lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="~/lib/assets/js/bootstrap-select.min.js"></script>
+    <script src="~/lib/assets/js/bootstrap-hover-dropdown.js"></script>
+    <script src="~/lib/assets/js/easypiechart.min.js"></script>
+    <script src="~/lib/assets/js/jquery.easypiechart.min.js"></script>
+    <script src="~/lib/assets/js/owl.carousel.min.js"></script>
+    <script src="~/lib/assets/js/wow.js"></script>
+    <script src="~/lib/assets/js/icheck.min.js"></script>
+    <script src="~/lib/assets/js/price-range.js"></script>
+    <script src="~/lib/assets/js/main.js"></script>
+
+    @*<script src="~/lib/jquery/dist/jquery.min.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>*@
+    @RenderSection("Scripts", required: false)
+
+    <div class="footer-area">
+
+        <div class=" footer">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-md-4 col-sm-6 wow fadeInRight animated">
+                        <div class="single-footer">
+                            <h4>FALE CONOSCO</h4>
+                            <div class="footer-title-line"></div>
+
+                            <img src="assets/img/footer-logo.png" alt="" class="wow pulse" data-wow-delay="1s">
+                            @*<p>Lorem ipsum dolor cum necessitatibus su quisquam molestias. Vel unde, blanditiis.</p>*@
+                        <ul class="footer-adress">
+                            <li>
+                                <i class="pe-7s-map-marker strong"> </i> Av. Rio Branco,
+                                <br>452 Centro, Marília - SP
+                            </li>
+                            <li><i class="pe-7s-mail strong"> </i>contato@talitamatosimoveis.com.br</li>
+                            <li><i class="pe-7s-call strong"> </i> (14) 3433-7001</li>
+                            <li><i class="pe-7s-call strong"> </i> (14) 3434-3304</li>
+                            <li><i class="pe-7s-call strong"> </i> (14) 9 9199-8554</li>
+                        </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 wow fadeInRight animated">
+                        <div class="single-footer">
+                            <h4>Acesso Rápido</h4>
+                            <div class="footer-title-line"></div>
+                            <ul class="footer-menu">
+                                <li><a href="https://www.talitamatosimoveis.com.br">Home</a>  </li>
+                                <li><a href="~/Empreendimentos/Consultar">Empreendimentos</a></li>
+                                <li><a href="~/CadastreSeuImovel/Create">Cadastre seu Imóvel</a></li>
+                                <li><a href="~/Home/Contact">Contato</a></li>
+                                <li><a href="~/UsuarioSistema/Login">Administrativo</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6 wow fadeInRight animated">
+                        <div class="single-footer news-letter">
+                            <h4>Redes Sociais</h4>
+                            <div class="footer-title-line"></div>
+
+
+                            <div class="social pull-right">
+                                <ul>
+                                    <li><a class="wow fadeInUp animated" href="https://www.facebook.com/TalitaMatos.Corretora.de.Imoveis" data-wow-delay="0.2s"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a class="wow fadeInUp animated" href="https://pt-br.facebook.com/talita.s.m.matos" data-wow-delay="0.2s"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a class="wow fadeInUp animated" href="#" data-wow-delay="0.4s"><i class="fa fa-instagram"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-copy text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="pull-left">
+                        <span> (C) <a href="http://aliensolucoes.com.br/">Alien Soluções</a> ,Todos os Direitos Reservados 2021  </span>
+                    </div>
+
+
+                    <div class="bottom-menu pull-right">
+                        <ul>
+                            <li><a class="wow fadeInUp animated" href="http://www.talitamatosimoveis.com.br" data-wow-delay="0.2s">Home</a></li>
+                            <li><a class="wow fadeInUp animated" href="~/Empreendimentos/Index" data-wow-delay="0.3s">Empreendimentos</a></li>
+                            <li><a class="wow fadeInUp animated" href="~/CadastreSeuImovel/Create" data-wow-delay="0.3s">Cadastrar Imoveis</a></li>
+                            <li><a class="wow fadeInUp animated" href="~/Home/Contact" data-wow-delay="0.6s">Contato</a></li>
+                            <li><a class="wow fadeInUp animated" href="~/UsuarioSistema/Login" data-wow-delay="0.6s">Administrativo</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

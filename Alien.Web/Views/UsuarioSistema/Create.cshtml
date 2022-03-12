@@ -1,0 +1,99 @@
+﻿@model Domain.AlienDB_Usuario_Sistema
+
+@{
+    ViewData["Title"] = "Create";
+}
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            @*<div class="form-group">
+                <label asp-for="Id" class="control-label"></label>
+                <input asp-for="Id" class="form-control" />
+                <span asp-validation-for="Id" class="text-danger"></span>
+            </div>*@
+            <div class="form-group">
+                <label asp-for="Nom_Login" class="control-label">Login*:</label>
+                <input asp-for="Nom_Login" class="form-control" />
+                <span asp-validation-for="Nom_Login" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Nom_Completo" class="control-label">Nome*:</label>
+                <input asp-for="Nom_Completo" class="form-control" />
+                <span asp-validation-for="Nom_Completo" class="text-danger"></span>
+            </div>
+            @*<div class="form-group">
+                <label asp-for="Id_Empresa" class="control-label"></label>
+                <input asp-for="Id_Empresa" class="form-control" />
+                <span asp-validation-for="Id_Empresa" class="text-danger"></span>
+            </div>*@
+            <div class="form-group">
+                <label asp-for="Des_Email" class="control-label">Email*:</label>
+                <input asp-for="Des_Email" class="form-control" />
+                <span asp-validation-for="Des_Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Des_Senha" class="control-label">Senha*:</label>
+                <input asp-for="Des_Senha" class="form-control" />
+                <span asp-validation-for="Des_Senha" class="text-danger"></span>
+            </div>
+            @*<div class="form-group">
+                <label asp-for="Des_Senha_Criptografada" class="control-label"></label>
+                <input asp-for="Des_Senha_Criptografada" class="form-control" />
+                <span asp-validation-for="Des_Senha_Criptografada" class="text-danger"></span>
+            </div>*@
+            @*<div class="form-group">
+                <label asp-for="Dat_Hora_Fim" class="control-label"></label>
+                <input asp-for="Dat_Hora_Fim" class="form-control" />
+                <span asp-validation-for="Dat_Hora_Fim" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Des_Tag" class="control-label"></label>
+                <input asp-for="Des_Tag" class="form-control" />
+                <span asp-validation-for="Des_Tag" class="text-danger"></span>
+            </div>*@
+            <div class="form-group">
+                <label asp-for="Nro_CPF" class="control-label">CPF:</label>
+                <input asp-for="Nro_CPF" class="form-control" />
+                <span asp-validation-for="Nro_CPF" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Nro_RG" class="control-label">RG:</label>
+                <input asp-for="Nro_RG" class="form-control" />
+                <span asp-validation-for="Nro_RG" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Des_Endereco" class="control-label">Endereço:</label>
+                <input asp-for="Des_Endereco" class="form-control" />
+                <span asp-validation-for="Des_Endereco" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Des_Telefone" class="control-label">Telefone:</label>
+                <input asp-for="Des_Telefone" class="form-control" />
+                <span asp-validation-for="Des_Telefone" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Des_Cidade" class="control-label">Cidade:</label>
+                <input asp-for="Des_Cidade" class="form-control" />
+                <span asp-validation-for="Des_Cidade" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Des_UF" class="control-label">UF?</label>
+                <input asp-for="Des_UF" class="form-control" />
+                <span asp-validation-for="Des_UF" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
