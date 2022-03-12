@@ -1,0 +1,10 @@
+C:\Users\gpgaloro\Downloads\AlienImobiliaria-main\Alien.Domain\bin\Debug\netstandard2.1\Alien.Domain.deps.json
+C:\Users\gpgaloro\Downloads\AlienImobiliaria-main\Alien.Domain\bin\Debug\netstandard2.1\Alien.Domain.dll
+C:\Users\gpgaloro\Downloads\AlienImobiliaria-main\Alien.Domain\bin\Debug\netstandard2.1\Alien.Domain.pdb
+C:\Users\gpgaloro\Downloads\AlienImobiliaria-main\Alien.Domain\obj\Debug\netstandard2.1\Alien.Domain.csproj.AssemblyReference.cache
+C:\Users\gpgaloro\Downloads\AlienImobiliaria-main\Alien.Domain\obj\Debug\netstandard2.1\Alien.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gpgaloro\Downloads\AlienImobiliaria-main\Alien.Domain\obj\Debug\netstandard2.1\Alien.Domain.AssemblyInfoInputs.cache
+C:\Users\gpgaloro\Downloads\AlienImobiliaria-main\Alien.Domain\obj\Debug\netstandard2.1\Alien.Domain.AssemblyInfo.cs
+C:\Users\gpgaloro\Downloads\AlienImobiliaria-main\Alien.Domain\obj\Debug\netstandard2.1\Alien.Domain.csproj.CoreCompileInputs.cache
+C:\Users\gpgaloro\Downloads\AlienImobiliaria-main\Alien.Domain\obj\Debug\netstandard2.1\Alien.Domain.dll
+C:\Users\gpgaloro\Downloads\AlienImobiliaria-main\Alien.Domain\obj\Debug\netstandard2.1\Alien.Domain.pdb
